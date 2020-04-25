@@ -18,8 +18,8 @@ Back end is handled with ?firebase?
 
 
 ## TEAM
-Brikena Dulaj - Michigan
-Mahmoud Alminawi - Drew U
-Miguel Gomez - U of Miami
-David Nesterov-Rappoport - Drew U
+Brikena Dulaj - Michigan </br>
+Mahmoud Alminawi - Drew U </br>
+Miguel Gomez - U of Miami </br>
+David Nesterov-Rappoport - Drew U </br>
 

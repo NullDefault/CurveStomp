@@ -2,15 +2,24 @@
 
 Flutter app for preventing local covid-19 spread
 
-## Getting Started
+## APP NAME GOES HERE
 
-This project is a starting point for a Flutter application.
+This application is intended to help communities in their eventual recovery from the Coronavirus
+pandemic. As school campuses and other similar institutions reopen, it will be essential to proceed
+with caution and ensure that any spread is halted in its early phases. The application collects
+relevant information from users, makes it anonymous and keeps track of any potential patient zero's.
+Through keeping track of what classes and public spaces the users share, the app can help relevant
+authorities quickly act if an infection is confirmed so those potentially affected can take the
+needed precautions.
 
-A few resources to get you started if this is your first Flutter project:
+## TECH
+Front-end is done in flutter.
+Back end is handled with ?firebase?
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TEAM
+Brikena Dulaj - Michigan
+Mahmoud Alminawi - Drew U
+Miguel Gomez - U of Miami
+David Nesterov-Rappoport - Drew U
+

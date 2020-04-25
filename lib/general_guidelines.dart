@@ -1,12 +1,13 @@
-import 'package:covid19preventionapp/Guidlines/whatToDoToAvoid.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/getflutter.dart';
-import 'Guidlines/COVIDTesting.dart';
-import 'Guidlines/aboutCovid19.dart';
-import 'Guidlines/otherGuidelines.dart';
+import 'Guidelines/COVIDTesting.dart';
+import 'Guidelines/aboutCovid19.dart';
+import 'Guidelines/otherGuidelines.dart';
+import 'Guidelines/whatToDoToAvoid.dart';
+
 
 class GeneralGuidelines extends StatelessWidget {
   GeneralGuidelines({Key key}) : super(key: key);

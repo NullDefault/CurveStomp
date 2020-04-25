@@ -4,16 +4,29 @@ import 'package:getflutter/getflutter.dart';
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "Landing Page",
-      home: new Scaffold(
-        backgroundColor: Color.fromRGBO(51, 51, 51, 1),
-        body: OrientationBuilder(
-          builder: (context, orientation) {
-            return MediaQuery.of(context).orientation == Orientation.portrait
-                ? _buildNarrowLayout(context)
-                : _buildWideLayout(context);
-          },
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topRight,
+          end: Alignment.bottomLeft,
+          stops: [0.1, 0.99],
+          colors: [
+            Colors.lightBlueAccent,
+            Colors.blueGrey
+          ],
+        ),
+      ),
+      child: new MaterialApp(
+        title: "Landing Page",
+        home: new Scaffold(
+          backgroundColor: Colors.transparent,
+          body: OrientationBuilder(
+            builder: (context, orientation) {
+              return MediaQuery.of(context).orientation == Orientation.portrait
+                  ? _buildNarrowLayout(context)
+                  : _buildWideLayout(context);
+            },
+          ),
         ),
       ),
     );
@@ -36,7 +49,7 @@ class LandingPage extends StatelessWidget {
           child: Text(
             "CurveFlatteningApp.",
             style: TextStyle(
-                fontSize: 28, color: Colors.teal, fontWeight: FontWeight.bold),
+                fontSize: 28, color: Colors.greenAccent, fontWeight: FontWeight.bold),
           ),
         ),
         Center(
@@ -101,7 +114,7 @@ class LandingPage extends StatelessWidget {
                 child: Text(
                   "CurveFlatteningApp.",
                   style: TextStyle(
-                      fontSize: 18, color: Colors.teal, fontWeight: FontWeight.bold),
+                      fontSize: 18, color: Colors.greenAccent, fontWeight: FontWeight.bold),
                 ),
               )
         ]),

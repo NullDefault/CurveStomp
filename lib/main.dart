@@ -53,7 +53,7 @@ class PlaceHolder extends StatelessWidget {
         ),
         Center(
           child: Text(
-            "CurveFlatteningApp",
+            "CurveFlatteningApp.",
             style: TextStyle(
                 fontSize: 28,
                 color: Colors.teal,

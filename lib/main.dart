@@ -72,8 +72,12 @@ class PlaceHolder extends StatelessWidget {
         Center(
           child: Padding(
             padding: const EdgeInsets.all(30.0),
-            child: Image(
-              image: AssetImage("assets/virus_icon.png"),
+            child: Container(
+              width: 200,
+              height: 200,
+              child: Image(
+                image: AssetImage("assets/virus_icon.png"),
+              ),
             ),
           ),
         ),

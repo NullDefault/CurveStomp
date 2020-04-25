@@ -13,9 +13,9 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: appTitle,
-      initialRoute: 'landing page',
+      initialRoute: 'LandingPage',
       routes: {
-        'landing page': (context) => LandingPage(),
+        'LandingPage': (context) => LandingPage(),
       },
     );
   }

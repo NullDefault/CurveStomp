@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:getflutter/getflutter.dart';
 
+import 'exposure_tracker.dart';
+import 'general_guidelines.dart';
+import 'symptom_tracker.dart';
+
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,25 +14,27 @@ class LandingPage extends StatelessWidget {
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           stops: [0.1, 0.99],
-          colors: [
-            Colors.lightBlueAccent,
-            Colors.blueGrey
-          ],
+          colors: [Colors.lightBlueAccent, Colors.blueGrey],
         ),
       ),
       child: new MaterialApp(
-        title: "Landing Page",
-        home: new Scaffold(
-          backgroundColor: Colors.transparent,
-          body: OrientationBuilder(
-            builder: (context, orientation) {
-              return MediaQuery.of(context).orientation == Orientation.portrait
-                  ? _buildNarrowLayout(context)
-                  : _buildWideLayout(context);
-            },
+          title: "Landing Page",
+          home: new Scaffold(
+            backgroundColor: Colors.transparent,
+            body: OrientationBuilder(
+              builder: (context, orientation) {
+                return MediaQuery.of(context).orientation ==
+                        Orientation.portrait
+                    ? _buildNarrowLayout(context)
+                    : _buildWideLayout(context);
+              },
+            ),
           ),
-        ),
-      ),
+          routes: {
+            'SymptomTracker': (context) => SymptomTracker(),
+            'ExposureTracker': (context) => ExposureTracker(),
+            'GeneralGuidelines': (context) => GeneralGuidelines(),
+          }),
     );
   }
 
@@ -49,14 +55,18 @@ class LandingPage extends StatelessWidget {
           child: Text(
             "CurveFlatteningApp.",
             style: TextStyle(
-                fontSize: 28, color: Colors.greenAccent, fontWeight: FontWeight.bold),
+                fontSize: 28,
+                color: Colors.greenAccent,
+                fontWeight: FontWeight.bold),
           ),
         ),
         Center(
           child: Padding(
             padding: const EdgeInsets.only(top: 12.0),
             child: GFButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "SymptomTracker");
+              },
               text: "Symptom Tracker",
               icon: Icon(Icons.healing),
               shape: GFButtonShape.pills,
@@ -67,7 +77,9 @@ class LandingPage extends StatelessWidget {
         ),
         Center(
           child: GFButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "ExposureTracker");
+            },
             text: "Exposure Tracking",
             icon: Icon(Icons.record_voice_over),
             shape: GFButtonShape.pills,
@@ -77,7 +89,9 @@ class LandingPage extends StatelessWidget {
         ),
         Center(
           child: GFButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "GeneralGuidelines");
+            },
             text: "General Guidelines",
             icon: Icon(Icons.spa),
             shape: GFButtonShape.pills,
@@ -93,30 +107,31 @@ class LandingPage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Column(
-            children: <Widget>[
-              SizedBox(
-                height: 30,
-              ),
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Container(
-                    width: 180,
-                    height: 180,
-                    child: Image(
-                      image: AssetImage("assets/virus_icon.png"),
-                    ),
-                  ),
+        Column(children: <Widget>[
+          SizedBox(
+            height: 30,
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                width: 180,
+                height: 180,
+                child: Image(
+                  image: AssetImage("assets/virus_icon.png"),
                 ),
               ),
-              Center(
-                child: Text(
-                  "CurveFlatteningApp.",
-                  style: TextStyle(
-                      fontSize: 18, color: Colors.greenAccent, fontWeight: FontWeight.bold),
-                ),
-              )
+            ),
+          ),
+          Center(
+            child: Text(
+              "CurveFlatteningApp.",
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.greenAccent,
+                  fontWeight: FontWeight.bold),
+            ),
+          )
         ]),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +140,9 @@ class LandingPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(top: 12.0),
                 child: GFButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, "SymptomTracker");
+                  },
                   text: "Symptom Tracker",
                   icon: Icon(Icons.healing),
                   shape: GFButtonShape.pills,
@@ -136,7 +153,9 @@ class LandingPage extends StatelessWidget {
             ),
             Center(
               child: GFButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "ExposureTracker");
+                },
                 text: "Exposure Tracking",
                 icon: Icon(Icons.record_voice_over),
                 shape: GFButtonShape.pills,
@@ -146,7 +165,9 @@ class LandingPage extends StatelessWidget {
             ),
             Center(
               child: GFButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "GeneralGuidelines");
+                },
                 text: "General Guidelines",
                 icon: Icon(Icons.spa),
                 shape: GFButtonShape.pills,

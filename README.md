@@ -15,11 +15,11 @@ Through keeping track of what classes and public spaces the users share, the app
 authorities quickly act if an infection is confirmed so those potentially affected can take the
 needed precautions.
 ### Features
-(1) Symptoms quiz that can help establish if you potentially are infected with COVID-19.
-(2) The application collects data about which public spaces the user frequents where they might spread the infection to others.
-(3) General information about COVID-19, tips on how to handle life in the new normal and links to important resources.
+(1) Symptoms quiz that can help establish if you potentially are infected with COVID-19.</br>
+(2) The application collects data about which public spaces the user frequents where they might spread the infection to others.</br>
+(3) General information about COVID-19, tips on how to handle life in the new normal and links to important resources.</br>
 
-Hackathon Disclaimer: Since this app was done by a team of two during an online hackathon, many features are missing or not properly implemented. Below is a list of what our vision of the application is and how we hope to achieve it in the future.
+Hackathon Disclaimer: Since this app was done by a team of two during an online hackathon, many features are missing or not properly implemented. Below is a list of what our vision of the application is and how we hope to achieve it in the future.</br>
 (1) IoT approach to infections. By keeping track of which connections (classes, e.t.c) users share, our app will be aware when a particular group was exposed to an infection. It would then be able to inform the school authorities or perhaps alert the affected users that they may need to self-isolate. </br>
 (2) Bluetooth proximity tracking. Similiar to what was achieved in Korea, perhaps our application could tell the user if they have recently come in contact with an infected individual.</br>
 (3) Firebase for logging in (probably through your school email).</br>

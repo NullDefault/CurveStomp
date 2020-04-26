@@ -4,210 +4,260 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/getflutter.dart';
+
 class whatToDo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('What can you do to stay safe?'),
+        title: Text('Recommended Precautions', style: TextStyle(fontSize: 18)),
+        backgroundColor: Colors.teal,
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: new EdgeInsets.only(top: 10, left: 2, right: 2, bottom: 2),
-          color: Colors.black,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              stops: [0.1, 0.99],
+              colors: [Colors.lightBlueAccent, Colors.blueGrey],
+            ),
+          ),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: <Widget>[
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('Washing hands', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text(
+                      'Washing your hands',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          fontSize: 25),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  content:Text( "Washing hands is a great way to be safe"),
+                  content: Text("Frequently washing your hands is a necessity.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
-
+                          color: Colors.green,
                           text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('Washing hands'
-                                        ,style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Washing hands',
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text(""),
-                                      Text('This Virus spread from surfaces to people when we touch a surface and then touch '
-                                          'our face, nose, or eyes'
-                                        ,style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, fontWeight: FontWeight.normal, decoration: TextDecoration.none,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text(""),
-                                      Text('Steps: \n',style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,
-                                      ),
-                                      ),
-                                      Text('1. Wet your hands with clean water and apply enough soap. \n2. Rub your hands to palm in a circular motion'
-                                          '\n3. wash back of your fingers and your thubm \n4. scrub your hands for at least 25 seconds\n 5. Rinse hands with clean water. \n'
-                                          '6. Dry throughly with clean towel',style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, decoration: TextDecoration.none,
-                                      ),
-                                      ),
+                                      Icon(Icons.thumbs_up_down)
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('Social Distancing', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text(
+                      'Social Distancing',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          fontSize: 25),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  content:Text( "The main and the best way to reduce the spread of this virus"),
+                  content: Text(
+                      "The scientifically proven way to reduce the spread of the virus.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
-
+                          color: Colors.green,
                           text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('Social Distancing'
-                                        ,style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Social Distancing',
+                                          style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.blue
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text(""),
-                                      Text('There is no vaccine discovered to kill this virus yet but, social '
-                                          'distancin is the best way as a precaution measure that you should consider \n'
-                                        ,style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, fontWeight: FontWeight.normal, decoration: TextDecoration.none,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text('\n * You may reduce the chance of getting this virus but avoiding people who '
-                                          'are sick.\n* Self distancing. \n* Avoid touching your face, nose, eyes, and mouth. \n* If you are sick, do not leave the house '
-                                          'and stay away from your family. Call your doctor/health care should there be any symptoms mentioned above.',style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, decoration: TextDecoration.none,
-                                      ),
-                                      ),
+                                      Icon(Icons.beach_access)
                                     ],
                                   );
-                                }
-                            );
-
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('Clean and Disinfect', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text(
+                      'Clean and Disinfect',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          fontSize: 25),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  content:Text( "Clean frequently any touched objects/surfaces using a "
-                      "household cleaning spray or wipe."),
+                  content: Text(
+                      "Frequently clean any touched objects/surfaces using a "
+                      "household cleaning spray or wipe.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
+                          color: Colors.green,
                           text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('This virus is new to us and there is no treatment for it yet, but remember people in the past fought against viruses like '
-                                          'the Corona virus without any of the tools, education, or the machines that are available to us today.'
-                                        ,style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.normal,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Proper disinfection will help immensely in preventing infections.',
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.blue
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text("\n Everyone has his/her own way of cleaning, but remember that you have to disinfect any serface that might be touched for example"
-                                          "tables, doornobs, lightseitches, handles, desks, toilets, faucets, sinks, etc. \n \n"
-                                          " "),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                            ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                            ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                            'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', textAlign: TextAlign.center,),
+                                      ),
+                                      Icon(
+                                        Icons.highlight
+                                      )
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('Cover your coughs nad sneezes', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text(
+                      'Cover your coughs and sneezes',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                          fontSize: 25),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  content:Text( "Use a tissue to cover your coughs and sneezes then dipose it in the trash"),
+                  content: Text(
+                      "Use a tissue to cover your coughs and sneezes then dispose of it in the trash.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
+                          color: Colors.green,
                           text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('Remember that this virus can spread if someone coughs/sneezes near you.'
-                                        ,style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.normal,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'If possible, wear a mask whenever you have to be in public.',
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.normal,
+                                            color: Colors.blue
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text("\n* Cover your mouth and nose with a tissue or with your elbow when sneezing or coughing.\n*"
-                                          "Throw any used tissues in the trash.\n* Wash your hands with soap and water for no less than 20 seconeds"
-                                          "(sing Happy birthday twice while washing your hands \n \n  Treat everyone as if they were sick, follow the "
-                                          "precautions measures mentioned above and STAY SAFE!"
-                                          " "),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                            ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                                ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                                'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', textAlign: TextAlign.center,),
+                                      ),
+                                      Icon(Icons.favorite)
                                     ],
                                   );
-                                }
-                            );
-
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
-              ] ),
+              ]),
         ),
       ),
-
     );
   }
 }
-

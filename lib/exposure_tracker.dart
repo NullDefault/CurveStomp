@@ -32,13 +32,13 @@ class ExposureTrackerState extends State<ExposureTracker>
         ),
         title: Text(
           "Exposure Questionnaire",
-          style: TextStyle(fontSize: 16, color: Colors.teal),
+          style: TextStyle(fontSize: 16, color: Colors.tealAccent),
         ),
         actions: <Widget>[
           GFIconButton(
             icon: Icon(
               Icons.record_voice_over,
-              color: Colors.teal,
+              color: Colors.tealAccent,
             ),
             onPressed: null,
             type: GFButtonType.transparent,

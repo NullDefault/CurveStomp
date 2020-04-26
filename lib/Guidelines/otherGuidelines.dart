@@ -6,186 +6,165 @@ import 'package:flutter/rendering.dart';
 import 'package:getflutter/components/card/gf_card.dart';
 import 'package:getflutter/getflutter.dart';
 
-class otherGuidelines extends StatelessWidget {
+class otherInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('Other strategies'),
+        title: Text('Other Information'),
+        backgroundColor: Colors.teal,
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: new EdgeInsets.only(top: 10, left: 2, right: 2, bottom: 2),
-          color: Colors.black,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              stops: [0.1, 0.99],
+              colors: [Colors.lightBlueAccent, Colors.blueGrey],
+            ),
+          ),
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: <Widget>[
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
                     title: Text('Strategies for work',
-                      style: TextStyle(fontWeight: FontWeight.bold),),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
                   ),
                   content: Text(
-                      "How to stay safe and follow the precaustion measures"),
+                    "How to stay safe and productive while following the precaution measures.",
+                    textAlign: TextAlign.center,
+                  ),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
-
+                          color: Colors.green,
                           text: 'Read More',
                           onPressed: () {
-                            showModalBottomSheet(context: context,
+                            showModalBottomSheet(
+                                context: context,
                                 builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text(' If you are smeone who work during this pandamic, you should consider the preivious precaustions measures:'
-                                          '\n '
-                                        , style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.normal,
-                                          decoration: TextDecoration.none,
-                                        ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                            ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                            ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                            'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                            textAlign: TextAlign.center),
                                       ),
-                                      Text(""),
-
-                                      Text(
-                                        '\n1. If you are working from home, try to avoid working on bed or couch. \n 2. Go on walks but'
-                                            ' maintain sicial distancing. \n3. If you live with someone who goes to work, make sure they wash hands highly '
-                                            ' recommanded taking a shower, etc. \n 4. If you are unemployed because of the Virus, search online, there are so '
-                                            'many opportunities and local community programs.',
-                                        style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 15,
-                                          decoration: TextDecoration.none,
-                                        ),
-                                      ),
+                                      Icon(Icons.computer)
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('How do you get tested?',
-                      style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text('Getting groceries',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
                   ),
                   content: Text(
-                      "Your doctor/health depatrmednt will decide wheather you get tested or not"),
+                    "How to safely get groceries and other necessary supplies",
+                    textAlign: TextAlign.center,
+                  ),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
-
+                          color: Colors.green,
                           text: 'Read More',
                           onPressed: () {
-                            showModalBottomSheet(context: context,
+                            showModalBottomSheet(
+                                context: context,
                                 builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('How do you get tested?'
-                                        , style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text(""),
-                                      Text(
-                                        ' What you need to know: \n',
-                                        style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      Text(
-                                        '\n Testing is limited to sympathetc, health care provides, and essential workers. \n'
-                                            '\nThere are a lot of testing sites across the country, follow your doctor/health provider instructions. \nIf you know someone/you experince'
-                                            'any of the COVID-19 symmptoms, call your doctor/health provider right away.',
-                                        style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 15,
-                                          decoration: TextDecoration.none,
-                                        ),
-                                      ),
+                                      Icon(Icons.local_pizza)
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('What to do while waiting for results?',
-                      style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text('Mental health tips',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
                   ),
                   content: Text(
-                      "The time of testing is diffrent from each area. "),
+                    "How to stay sane during this unusual and troubling time.",
+                    textAlign: TextAlign.center,
+                  ),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
+                          color: Colors.green,
                           text: 'Read More',
                           onPressed: () {
-                            showModalBottomSheet(context: context,
+                            showModalBottomSheet(
+                                context: context,
                                 builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text(
-                                        'If you develop more symptoms, call your health provider and get emergency care immediately . '
-                                        , style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.normal,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          textAlign: TextAlign.center,
+                                        ),
                                       ),
-                                      ),
-                                      Text(
-                                          "\nDo not leave the house, stay isolated from everyone in the house. Keep your doctor's, health provider information "
-                                              "handy.\n Call your doctor right away if you feel not well and they will advise you what to do next. "),
-
-
+                                      Icon(Icons.brightness_low)
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
-
               ]),
         ),
       ),
-
     );
   }
 }

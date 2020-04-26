@@ -10,163 +10,200 @@ class aboutCOVID19 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('About Covid-19'),
+        backgroundColor: Colors.teal,
       ),
       body: SingleChildScrollView(
         child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              stops: [0.1, 0.99],
+              colors: [Colors.lightBlueAccent, Colors.blueGrey],
+            ),
+          ),
           padding: new EdgeInsets.only(top: 10, left: 2, right: 2, bottom: 2),
-          color: Colors.black,
           child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: <Widget>[
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                      title: Text('What is COVID-19?', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text('What is COVID-19?',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
                   ),
-                  content:Text( "Information about social distancing, isloations, etc"),
+                  content: Text(
+                      "Information about social distancing, isolation, etc.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                          color: Colors.black,
-
+                          color: Colors.green,
                           text: 'Read More',
-                      onPressed: (){
-                        showModalBottomSheet(context: context,
-                            builder: (context){
-                              return Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: <Widget>[
-                                  Text('What is COVID-19?'
-                                    ,style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                Text(""),
-                                Text('Corona virus is called COVID-19. Corona '
-                                    'viruses are a huge group '
-                              'of viruses that are common among animals. '
-                                  ,style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, fontWeight: FontWeight.normal, decoration: TextDecoration.none,
-                              ),
-                                ),
-                                  Text(""),
-                                  Text('What should you know?',style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Text('This virus can be transmitted from animals to hum'
-                                      'ans which makes it a novel virus. \n \n This virus ca'
-                                      'n make people sick, it can be mild, moderate or severe illness',style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, decoration: TextDecoration.none,
-                                    ),
-                                  ),
-                                ],
-                              );
-                            }
-                        );
-
-  }
-                      ),
-
-                    ],
-                  ),
-                ),
-
-                GFCard(
-                  boxFit: BoxFit.cover,
-                  color: Colors.grey ,
-                  title: GFListTile(
-                    title: Text('What are the Symptoms?', style: TextStyle(fontWeight: FontWeight.bold),),
-                  ),
-                  content:Text( "Coronavirus symptoms include cough, sore throat, fever, and possibly a headache."),
-                  buttonBar: GFButtonBar(
-
-                    children: <Widget>[
-                      GFButton(
-                          color: Colors.black,
-
-                          text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('What are the Symptoms?'
-                                        ,style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'What is COVID-19?',
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue),
                                         ),
                                       ),
-                                      Text(""),
-                                      Text('This virus can make people sick, it can be mild, moderate or severe illness. \n'
-                                        ,style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, fontWeight: FontWeight.normal, decoration: TextDecoration.none,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.normal,
+                                            decoration: TextDecoration.none,
+                                          ),
+                                          textAlign: TextAlign.center,
                                         ),
                                       ),
-                                      Text('Coronavirus symptoms include cough, sore throat, fever, and possibly a headache.This virus i'
-                                          's super scary for people with a weakened immune system, kids, elderly, and those wh'
-                                          'o are sick.',style: TextStyle(fontFamily: 'Montserrat', fontSize: 15, decoration: TextDecoration.none,
-                                      ),
-                                      ),
+                                      Icon(Icons.category)
                                     ],
                                   );
-                                }
-                            );
-
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-
-
                 GFCard(
                   boxFit: BoxFit.cover,
-                  color: Colors.grey ,
+                  color: Colors.tealAccent[100],
                   title: GFListTile(
-                    title: Text('How it spreads?', style: TextStyle(fontWeight: FontWeight.bold),),
+                    title: Text('What are the Symptoms?',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
                   ),
-                  content:Text( "This virus spreads spreads in varies ways."),
+                  content: Text(
+                      "Coronavirus symptoms include cough, sore throat, fever, and possibly a headache.",
+                      textAlign: TextAlign.center),
                   buttonBar: GFButtonBar(
-
                     children: <Widget>[
                       GFButton(
-                        color: Colors.black,
+                          color: Colors.green,
                           text: 'Read More',
-                          onPressed: (){
-                            showModalBottomSheet(context: context,
-                                builder: (context){
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
                                   return Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: <Widget>[
-                                      Text('How it spreads?'
-                                        ,style: TextStyle(
-                                          fontSize: 25,
-                                          fontWeight: FontWeight.bold,
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'What are the Symptoms?',
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue),
                                         ),
                                       ),
-                                      Text("\nThis virus spreads when someone comes"
-                                          " into contact with an infected person’s secretions such as cough, sneeze or eve"
-                                          "n shaking hands. \n \nThis virus can spread and be transmitted when someone touches anything a"
-                                  "n infected person has touched, and then touching your mouth, nose, eyes, or even your body."),
-
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          style: TextStyle(
+                                            fontFamily: 'Montserrat',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.normal,
+                                            decoration: TextDecoration.none,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                      Icon(Icons.visibility)
                                     ],
                                   );
-                                }
-                            );
-                          }
-                      ),
-
+                                });
+                          }),
                     ],
                   ),
                 ),
-              ] ),
+                GFCard(
+                  boxFit: BoxFit.cover,
+                  color: Colors.tealAccent[100],
+                  title: GFListTile(
+                    title: Text('How does it spread?',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            fontSize: 25),
+                        textAlign: TextAlign.center),
+                  ),
+                  content: Text("This virus spreads in various ways.",
+                      textAlign: TextAlign.center),
+                  buttonBar: GFButtonBar(
+                    children: <Widget>[
+                      GFButton(
+                          color: Colors.green,
+                          text: 'Read More',
+                          onPressed: () {
+                            showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
+                                  return Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: <Widget>[
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'How does it spread?',
+                                          style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.blue),
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                                          ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                          ' Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+                                          'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.record_voice_over
+                                      )
+                                    ],
+                                  );
+                                });
+                          }),
+                    ],
+                  ),
+                ),
+              ]),
         ),
       ),
-
     );
   }
 }
-

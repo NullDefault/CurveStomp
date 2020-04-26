@@ -47,8 +47,8 @@ class LandingPage extends StatelessWidget {
         children: <Widget>[
           Center(
             child: Container(
-              width: 200,
-              height: 200,
+              width: 150,
+              height: 150,
               child: Image(
                 image: AssetImage("assets/virus_icon.png"),
               ),
@@ -116,9 +116,9 @@ class LandingPage extends StatelessWidget {
         ),
         onBottom(
           AnimatedWave(
-            height: 45,
+            height: 145,
             speed: 0.63,
-            color: Color.fromRGBO(131, 230, 247, 0.2),
+            color: Color.fromRGBO(131, 230, 247, 0.1),
           ),
         ),
     ]

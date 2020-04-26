@@ -188,6 +188,6 @@ class ExposureTrackerState extends State<ExposureTracker>
   }
 
   void _submitQuestionnaire(){
-
+    Navigator.pop(context);
   }
 }

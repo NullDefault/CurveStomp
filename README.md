@@ -28,11 +28,8 @@ Hackathon Disclaimer: Since this app was done by a team of two during an online 
 Front end is done in Flutter.
 Back end is handled with Firebase.
 ### Screenshots
-Landing Page
 ![Screenshot 1](./screenshots/landing_page.png)
-Exposure Quiz
 ![Screenshot 2](./screenshots/exposure_quiz.png)
-App Demo
 ![Screenshot 3](./screenshots/app_demo.gif)
 ### Team
 Mahmoud Alminawi - Drew U </br>

@@ -27,6 +27,7 @@ Hackathon Disclaimer: Since this app was done by a team of two during an online 
 ### Technologies Used
 Front end is done in Flutter.
 Back end is handled with Firebase.
+To run the application you should clone the repository into Android Studio, install the Flutter and Dart SDK's if you don't have them already and then run the application.
 ### Screenshots
 ![Screenshot 1](./screenshots/landing_page.png)
 ![Screenshot 2](./screenshots/symptom_quiz.png)

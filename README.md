@@ -1,4 +1,5 @@
 # <img src="https://github.com/NullDefault/CurveStomp/blob/master/assets/virus_icon.png" alt="icon" width="100"/> CurveStomp 
+<img src="https://img.shields.io/badge/dart-%230175C2.svg?&style=for-the-badge&logo=dart&logoColor=white"/><img src="https://img.shields.io/badge/Flutter%20-%2302569B.svg?&style=for-the-badge&logo=Flutter&logoColor=white" /><img src="https://img.shields.io/badge/firebase%20-%23039BE5.svg?&style=for-the-badge&logo=firebase"/><br/>
 CurveStomp is a Flutter application designed to help communities adapt to the new normal through faciliating the prevention and detection of local COVID-19 spread, and sharing important information that pertrains to it.
 ## Table of Contents
 * [General info](#general-info)
